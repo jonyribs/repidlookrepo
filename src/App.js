@@ -1,18 +1,15 @@
-import logo from './logo.svg';
-import './App.css';
-import './home/home'
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Home from './home/home'; // Ajuste o caminho conforme necessário
 
 function App() {
   return (
-    <BrowserRouter>
-    <Routes>
-     
-        <Route exact path="/" element={<Home/>} />
+    <Router basename="/repidlookrepo">
+      <Routes>
+        <Route path="/" element={<Home />} />
         
-        
-      
-    </Routes>
-    </BrowserRouter>
+      </Routes>
+    </Router>
   );
 }
 
